@@ -14,9 +14,14 @@ body {
 }
 
 h2{
-   padding-left: 12%;
-   font-size: 60px;
-   color: rgb(188, 12, 71);
+    font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding-left: 10%;
+  
 }
 
 .add-container {
@@ -40,13 +45,13 @@ h2{
 	background-color:#fff;
 }
 #buttons{
-	margin-left: 20%;
+	
 	border: 1px solid black;
 	border-radius: 6px;
 }
 
 #navbar button:hover {
-	background-color: rgb(121, 244, 13);
+	background-color:  #66ed4b;
 }
 
 #navbar span{
@@ -105,3 +110,73 @@ tr {
   .downArrow{
 	background-image: none;
   }
+  /*............................................*/
+
+  .add-container {
+	background-color: #f2f2f2;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+  }
+  
+  input[type="text"], input[type="number"] {
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus {
+	outline: none;
+	box-shadow: 0px 0px 3px rgba(0, 0, 255, 0.3);
+  }
+
+  button #submit{
+    font-size : 14 px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s ease ;
+    
+}
+
+button #submit{
+    font-size : 13 px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.4s ease ;
+}
+  button #submit{
+	font-size : 14 px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s ease ;
+  }
+  
+  button:hover {
+	background-color: #3e8e41;
+  }
+  
