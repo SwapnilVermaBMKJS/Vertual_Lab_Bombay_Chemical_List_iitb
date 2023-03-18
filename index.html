@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="navbar">
+    <div class="buttons" id="buttons">
+      <button id="edit">&#128395 <br><span>Edit</span></button>
+      <button id="add">&#10133 <br><span>Add</span></button>
+      <button id="down"> &#129147 <br><span>Down</span></button>
+      <button id="up"> &#129145 <br><span>Up</span></button>
+      <button id="delete">&#10060<br><span>Delete</span></button>
+      <button id="reload">&#11119<br><span>Reload</span></button>
+      <button id="save">&#128190<br><span>Save</span></button>
+    </div>
+  </section>
+  <h2>Chemical Supplies</h2>
+  <br>
+  <div class="add-container" id="add-container">
+    <div class="inputs">
+      <input type="text" id="addName" placeholder="Name">
+      <input type="text" id="addVendor" placeholder="vendor">
+      <input type="number" id="addDensity" placeholder="Density">
+      <input type="number" id="addViscosity" placeholder="Viscosity">
+      <input type="text" id="addPackaging" placeholder="Packaging">
+      <input type="number" id="addPackSize" placeholder="Pack Size">
+      <input type="text" id="addUnit" placeholder="Unit">
+      <input type="number" id="addQty" placeholder="Quantity">
+    </div>
+    <br>
+    <button id="submit">Add</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" name="checkboxMain" id="checkboxMain" class="checkbox-label"></label></th>
+        <th id="id">No</th>
+        <th id="name">Chemical name</th>
+        <th id="vendor">Vendor</th>
+        <th id="density">Density <br><span>g/m²</span>
+        </th>
+        <th id="viscosity">Viscosity <br><span>m²/s</span></th>
+        <th id="packaging">Packaging</th>
+        <th id="size">Pack size</th>
+        <th id="unit">Unit</th>
+        <th id="qty">Quantity</th>
+      </tr>
+    </thead>
+    <tbody id="data-output">
+
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+
+</html>

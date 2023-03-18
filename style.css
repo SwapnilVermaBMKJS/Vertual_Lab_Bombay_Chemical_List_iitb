@@ -1,0 +1,107 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	min-height: 100vh;
+	color: #555;
+	padding: 30px 30px;
+	margin-top: 40px;
+}
+
+h2{
+   padding-left: 12%;
+   font-size: 60px;
+   color: rgb(188, 12, 71);
+}
+
+.add-container {
+	display: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#navbar {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#navbar button {
+	padding: 0.5rem;
+	border-radius: 15%;
+	border: none;
+	background-color:#fff;
+}
+#buttons{
+	margin-left: 20%;
+	border: 1px solid black;
+	border-radius: 6px;
+}
+
+#navbar button:hover {
+	background-color: rgb(121, 244, 13);
+}
+
+#navbar span{
+	font-size: 8px;
+}
+
+table {
+	width: 85%;
+	margin: 30px auto;
+}
+
+table th {
+
+	padding-top: 0.5%;
+	color: black;
+	background-color: #cede89;
+	/* background-color: #fff; */
+	border: thin solid #d4d4d4;
+}
+.checkbox-label{
+	padding: 0;
+	background-color: #f4f4f4;
+	/* background-color: #fff; */
+	border: thin solid #d4d4d4;
+}
+
+table td {
+	padding: 10px;
+	border: thin solid #d4d4d4;
+	width: auto;
+	text-align: center;
+	background-color: #fff;
+}
+
+table span {
+	color: rgb(122, 30, 164)
+}
+
+table tr td:nth-child(-n+2){
+	width: 20px;
+}
+ 
+tr {
+	background-color: rgb(188, 62, 125);
+}
+
+.checked-row {
+	background-color: rgb(83, 9, 9);
+  }
+
+
+  .upwordArrow{
+	background-image: none;
+  }
+
+  .downArrow{
+	background-image: none;
+  }
