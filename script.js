@@ -312,7 +312,9 @@ function clearList() {
     Object.keys(myArr).map((key) => myArr[key].remove())
 }
 
-function sort(target) {
+let indexOfArrow=0;
+
+function sort(target,targetElm,text) {
     if (sortedFlag) {
         sortedFlag = !sortedFlag
         data.sort((a, b) => {
@@ -322,6 +324,7 @@ function sort(target) {
                 return -1;
             else return 0;
         })
+        targetElm.innerHTML = text+" ↓";
     } else {
         //for Decreasing Order
         sortedFlag = !sortedFlag
@@ -332,51 +335,59 @@ function sort(target) {
                 return 1;
             else return 0;
         })
+        targetElm.innerHTML = text+" ↑";
     }
+        // Remove the ↑ or ↓ sign from other columns if present
+        let thList = document.querySelectorAll("th");
+        for (let i = 0; i < thList.length; i++) {
+            if (thList[i] !== targetElm) {
+               
+                thList[i].textContent = thList[i].textContent.replace(/[\u2191\u2193]/g, "");
+            }
+        }
 }
 
 vendor.addEventListener('click', () => {
-    sort('vendor')
+    sort('vendor',vendor,'Vendor');
     clearList();
     insertData(data);
 })
 
 name.addEventListener('click', () => {
-    sort('chemicalName')
+    sort('chemicalName',name,'Chemical name')
     clearList()
     insertData(data)
 })
 density.addEventListener('click', () => {
-    sort('density')
+    sort('density',density,"Density <br><span>g/m²</span>");
     clearList()
     insertData(data)
 })
 viscosity.addEventListener('click', () => {
-    sort('viscosity')
+    sort('viscosity',viscosity,"Viscosity <br><span>m²/s</span>")
     clearList()
     insertData(data)
 })
 packaging.addEventListener('click', () => {
-    sort('packaging')
+    sort('packaging',packaging,'Packaging')
     clearList()
     insertData(data)
 })
 size.addEventListener('click', () => {
-    sort('packSize')
+    sort('packSize',size,'Pack size')
     clearList()
     insertData(data)
 })
 unit.addEventListener('click', () => {
-    sort('unit')
+    sort('unit',unit,'Unit')
     clearList()
     insertData(data)
 })
 qty.addEventListener('click', () => {
-    sort('quantity')
+    sort('quantity',qty,'Quantity')
     clearList()
     insertData(data)
 })
-
 
 
 //Reload Button;
@@ -384,25 +395,3 @@ qty.addEventListener('click', () => {
 reload.addEventListener('click', function () {
     location.reload();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
