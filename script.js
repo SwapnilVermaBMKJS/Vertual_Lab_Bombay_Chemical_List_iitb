@@ -339,7 +339,7 @@ function sort(target,targetElm,text) {
     }
         // Remove the ↑ or ↓ sign from other columns if present
         let thList = document.querySelectorAll("th");
-        for (let i = 0; i < thList.length; i++) {
+        for (let i = 1; i < thList.length; i++) {
             if (thList[i] !== targetElm) {
                
                 thList[i].textContent = thList[i].textContent.replace(/[\u2191\u2193]/g, "");
@@ -359,12 +359,12 @@ name.addEventListener('click', () => {
     insertData(data)
 })
 density.addEventListener('click', () => {
-    sort('density',density,"Density <br><span>g/m²</span>");
+    sort('density',density,"Density <span>g/m²</span>");
     clearList()
     insertData(data)
 })
 viscosity.addEventListener('click', () => {
-    sort('viscosity',viscosity,"Viscosity <br><span>m²/s</span>")
+    sort('viscosity',viscosity,"Viscosity <span>m²/s</span>")
     clearList()
     insertData(data)
 })
